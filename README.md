@@ -1,5 +1,12 @@
 # CPU500x
-CPU500x Code Competition
+CPU500x manual
+
+Handige linkjes:
+
+* [Introductie competitie](Intro.md)
+* [Online simulator](http://lucrasoft.github.io/CPU500x/)
+
+
 
 
 Instructie handleiding voor de Lucrasoft CPU500x processor.
