@@ -7,9 +7,9 @@ Er is een C# Simulator (commandline) en een Javascript/Typescript simulator (web
 Een implementatie van de simulator in Java, Haskell, Python, etc.. is echter vrij eenvoudig te maken, en mocht je die hebben, stuur ze gerust alvast op.
 
 
-Planning
+Presentaties
 --------
-Vrijdag 5 februari, einde van de middag de presentaties
+Vrijdag 5 februari 2016, einde van de middag de presentaties.
 
 Nog niet gestelde vragen
 ------------------------
