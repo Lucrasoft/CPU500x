@@ -5,7 +5,7 @@ Handige linkjes:
 
 * [Introductie competitie](https://github.com/Lucrasoft/CPU500x/blob/master/INTRO.md)
 * [Online simulator](http://lucrasoft.github.io/CPU500x/)
-
+* [Overige opmerkingen](https://github.com/Lucrasoft/CPU500x/blob/master/OVERIGE.md)
 
 
 
