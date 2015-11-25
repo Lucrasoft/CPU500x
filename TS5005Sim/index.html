@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>CPU5006 SIM</title>
+    <link rel="stylesheet" href="app.css" type="text/css" />
+    <script src="knockout-3.4.0.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <h1>The CPU5006 - online simulator </h1>
+
+    <h3>Choose your CPU edition</h3>
+
+    <label><input type="radio" value="8" data-bind="checked: registerCount" />8 registers</label><br />
+    <label><input type="radio" value="32" data-bind="checked: registerCount" />32 registers</label>
+  
+          
+    <h3>Put your machine code here</h3>
+    <textarea data-bind="value: code"> </textarea>
+
+    <button data-bind='click: run'>Execute code</button>
+    
+    
+    <h3>Output of your machine code</h3>
+    <label data-bind="text: output"></label>
+
+    <h3>State of the CPU</h3>
+
+    Active register: <label data-bind="text: debugActiveReg"></label>
+    <h4>Registers</h4>
+    <table>
+        <tbody>
+            <tr data-bind="foreach: debugRegisters">
+                <td>
+                   
+                        <label data-bind="text: index"></label><br />
+                        <label data-bind="text: value"></label><br />              
+                </td>
+            </tr>
+            
+           
+        </tbody>
+    </table>
+
+    <h3>Manual instructions to CPU</h3>
+    <button data-bind='click: op_prevReg'>&lt; Prev Register</button>
+    <button data-bind='click: op_nextReg'>&gt; Next Register</button>
+    <button data-bind='click: op_prevChar'>- Prev Char</button>
+    <button data-bind='click: op_nextChar'>+ Next Char</button>
+    
+    <button data-bind='click: op_output'>O Output</button>
+
+    <script>
+        var vm = new vmPage();
+        ko.applyBindings(vm);
+    </script>
+
+
+</body>
+</html>
