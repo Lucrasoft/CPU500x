@@ -24,7 +24,7 @@ Het doel is dan ook om, in de 'machinetaal' van deze CPU, een programma te schri
 
 Je moet dus een gevraagde tekst geautomatiseerd omzetten naar machinetaal code, een soort compiler. 
 
-Het wedstrijd element hier van is dat je machinetaal programma zo klein mogelijk moet zijn!
+Het wedstrijd element hier van is dat je machinetaal programma **zo klein mogelijk** moet zijn!
 
 De instuctieset van de CPU, handleiding en een processor simulator, zijn te vinden op Github.
 
