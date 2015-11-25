@@ -70,4 +70,4 @@ Dat kan mooier, cooler, gaver, beter.
 
 ### Math - Bonus
 
-Laat de engineer eens los. Als je zelf 1 extra single-cycle instructie zou mogen verzinnen, die de programma's korter maakt. Welke zou dat zijn? Hoeveel korter word het dan?
+Laat de engineer eens los. Als je zelf 1 extra instructie zou mogen verzinnen, die de programma's korter maakt. Welke zou dat zijn? Hoe werkt de instructie? Hoeveel korter gaat de code dan worden?
