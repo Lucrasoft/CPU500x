@@ -3,7 +3,7 @@ CPU500x manual
 
 Handige linkjes:
 
-* [Introductie competitie](Intro.md)
+* [Introductie competitie](https://github.com/Lucrasoft/CPU500x/blob/master/INTRO.md)
 * [Online simulator](http://lucrasoft.github.io/CPU500x/)
 
 
