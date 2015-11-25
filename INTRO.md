@@ -7,7 +7,7 @@ Beste lezer, ook dit jaar wil Lucrasoft je graag uitnodigen om mee te doen aan e
 Introductie
 -----------
 
-Jaren na Intel's eerste 4004 processor, komt Lucrasoft ook met een processor en wel de 5006CPU.
+Jaren na Intel's eerste 4004 processor, komt Lucrasoft ook met een processor en wel de CPU5006.
 Deze processor komt met maar liefst 5 basis instructies en 1 geavanceerde instructie.
 En, hij is ook nog eens beschikbaar in 2 varianten! Special voor de kerstdagen. Ontdek hem snel!
 
