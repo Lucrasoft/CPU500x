@@ -41,6 +41,12 @@ var CPU500x = (function () {
             this.activeRegisterIndex += this.registerCount;
         }
     };
+    CPU500x.prototype.addFirst = function () {
+        this.registers[this.activeRegisterIndex] += this.registers[0];
+        if (this.registers[this.activeRegisterIndex] >= this.registerValues.length) {
+            this.registers[this.activeRegisterIndex] = 0;
+        }
+    };
     CPU500x.prototype.getOutput = function () {
         return this.registerValues[this.registers[this.activeRegisterIndex]];
     };
@@ -80,6 +86,9 @@ var Simulator = (function () {
                     break;
                 case 'O':
                     this.result += this.cpu.getOutput();
+                    break;
+                case 'A':
+                    this.cpu.addFirst();
                     break;
                 default:
                     this.hasError = true;
@@ -125,6 +134,7 @@ var vmPage = (function () {
         this.op_prevChar = function () { self.sim.cpu.charDown(); self.updateState(); };
         this.op_nextReg = function () { self.sim.cpu.nextRegister(); self.updateState(); };
         this.op_prevReg = function () { self.sim.cpu.prevRegister(); self.updateState(); };
+        this.op_addFirst = function () { self.sim.cpu.addFirst(); self.updateState(); };
         this.op_output = function () {
             self.output(self.output() + self.sim.cpu.getOutput());
             self.updateState();
@@ -151,9 +161,4 @@ var vmPage = (function () {
     };
     return vmPage;
 })();
-window.onload = function () {
-    //var el = document.getElementById('content');
-    //var greeter = new Greeter(el);
-    //greeter.start();
-};
 //# sourceMappingURL=app.js.map
