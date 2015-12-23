@@ -54,6 +54,13 @@ class CPU500x {
         }
     }
 
+    public addFirst(): void {
+        this.registers[this.activeRegisterIndex] += this.registers[0];
+        if (this.registers[this.activeRegisterIndex] >= this.registerValues.length) {
+            this.registers[this.activeRegisterIndex] = 0;
+        }
+    }
+
     public getOutput(): string {
         return this.registerValues[this.registers[this.activeRegisterIndex]];
     }
@@ -105,6 +112,8 @@ class Simulator {
                     break;
                 case 'O': this.result += this.cpu.getOutput();
                     break;
+                case 'A': this.cpu.addFirst();
+                    break;
                 default:
                     this.hasError = true;
                     this.result = "Error at position " + pos + ". Invalid operator :" + c;
@@ -113,9 +122,6 @@ class Simulator {
 
         }
     }
-
-
-
 }
 
 
@@ -155,6 +161,7 @@ class vmPage {
     op_nextChar: () => void;
     op_prevChar: () => void;
     op_output: () => void;
+    op_addFirst: () => void;
 
     constructor() {
         var self = this;
@@ -179,6 +186,7 @@ class vmPage {
         this.op_prevChar = () => { self.sim.cpu.charDown(); self.updateState();  }
         this.op_nextReg = () => { self.sim.cpu.nextRegister(); self.updateState();  }
         this.op_prevReg = () => { self.sim.cpu.prevRegister(); self.updateState(); }
+        this.op_addFirst = () => { self.sim.cpu.addFirst(); self.updateState(); }
         this.op_output = () => {
             self.output(self.output() + self.sim.cpu.getOutput());
             self.updateState(); 
