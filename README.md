@@ -52,7 +52,7 @@ De CPU kent maar 5 basis instructies en 1 advanced instructie
 | +            | nextChar     | volgend karakter op huidig register
 | -            | prevChar     | vorig karakter op huidig register 
 | O            | outputChar   | zet huidig karakter van huidig register op de IO
-
+| A            | addFirst     | telt inhoudt van 1e register op bij huidig register
 
 Advanced instruction
 --------------------
@@ -61,6 +61,7 @@ In een recent persbericht gaf de Head of the Research Department van Lucrasoft (
 
 > Voor menig partij zijn we een baken tijdens het navigeren in deze wereld en verdienen we werkelijk waar een lintje door ons besluit om deze instructie voorlopig nog aan banden te leggen.
 
+UPDATE 23 DEC : Inmiddels is de Advanced instructie vrijgegeven. Het betreft de machinecode A. 
 
 
 Voorbeeld machine code
@@ -89,7 +90,7 @@ Gevraagde output
 ```
 Machinetaal     
 ```
-+O>++OO<O
++O>A+OO<O
 ```
 
 Uitleg
@@ -98,7 +99,8 @@ Uitleg
 - `+` maakt van huidige register een A
 -`O` plaats waarde van huidige register op de output
 - `>` schuif een register op , deze staat nog op SPATIE
-- `++` maakt van huidige register een B 
+- 'A' telt de inhoud van register 1 (bevat een A) op huidig register 2 (een SPATIE)
+- `+` maakt van huidige register een B 
 - `OO` plaats 2x het huidige register op de OUTPUT
 - `<` ga terug naar het vorige register (die nog op de A stond)
 - `O` plaats de A op de output
