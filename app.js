@@ -44,7 +44,7 @@ var CPU500x = (function () {
     CPU500x.prototype.addFirst = function () {
         this.registers[this.activeRegisterIndex] += this.registers[0];
         if (this.registers[this.activeRegisterIndex] >= this.registerValues.length) {
-            this.registers[this.activeRegisterIndex] = 0;
+            this.registers[this.activeRegisterIndex] -= this.registerValues.length;
         }
     };
     CPU500x.prototype.getOutput = function () {
